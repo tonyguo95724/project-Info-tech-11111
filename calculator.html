@@ -1,0 +1,32 @@
+<body>
+First Value: <input type="text" id="input1" value="1">
+<br>
+Second Value: <input type="text" id="input2" value="1"> 
+<br>
+<input type="button" name="calculate" value="Calculate">
+<br>
+Hypotenuse Length Is: <span id="hyp"></span>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script>
+$("input[name=calculate]").on("click",Calculate)
+
+function Calculate(evt) {
+var a = $("#input1").val();
+var b = $("#input2").val();
+a = parseInt(a);
+b = parseInt(b);
+
+var c = (Math.pow(a, 2)) + (Math.pow(b, 2));
+var hyp = Math.sqrt(c);
+
+$("#hyp").html(hyp);
+
+}
+
+
+
+</script>
