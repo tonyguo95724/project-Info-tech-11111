@@ -1,0 +1,33 @@
+<html>
+<body>
+<center>
+Random Color: <input type="text" name="color" id="color">
+<br>
+Random Place: <input type="text" name="place" id="place">
+<br>
+Random Number: <input type="number" name="number" id="number">
+<br>
+<button id="launch">Generate your story</button>
+<div id="story"></div>
+</center>
+</body>
+
+<script>
+var color = document.querySelector("#color");
+var place = document.querySelector("#place");
+var number = document.querySelector("#number");
+var story = document.querySelector("#story")
+var launch = document.querySelector("#launch");
+launch.addEventListener("click", writeStory, false);
+
+function writeStory(){
+var launchedStory = "";
+launchedStory += "<p>The was onces a farmer Named Eric, he was a " + color.value + " man with 88 Chickens in his farm.</p>";
+launchedStory += "<p>Eric lived far away in a place called " + place.value + ", Which is very far away from civilizition.</p>";
+launchedStory += "<p>Eric lived a good life, but " + number.value + " days later, he died. End of Story.</p>";
+
+story.innerHTML = launchedStory;
+}
+</script>
+
+</html>
